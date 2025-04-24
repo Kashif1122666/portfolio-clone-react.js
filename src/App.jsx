@@ -8,6 +8,7 @@ import Course from './components/Course'
 import Portfolio from './components/Portfolio'
 import WhChose from './components/WhChose'
 import StartProject from './components/StartProject'
+import ExpRef from './components/ExpRef'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Portfolio/>
       <WhChose/>
       <StartProject/>
+      <ExpRef/>
     </div>
   )
 }
