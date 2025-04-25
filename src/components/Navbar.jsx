@@ -1,14 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-scroll';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
-    "SHAHARYAR", "home", "aboutMe", "services", "portfolio", "why Chose",
-    "Experience & Reference", "our Clients", "contact"
+    "SHAHARYAR",
+    "home",
+    "aboutMe",
+    "services",
+    "portfolio",
+    "why Chose",
+    "Experience & Reference",
+    "our Clients",
+    "contact",
   ];
 
   useEffect(() => {
@@ -16,29 +23,24 @@ const Navbar = () => {
       setScrolled(window.scrollY > 50); // add background if scrolled past 50px
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <motion.nav
-    className={`fixed top-0 w-full px-4 py-1 shadow-lg z-50 transition-colors duration-300 ${
-      scrolled || isOpen ? 'bg-black/70 backdrop-blur-md' : 'bg-transparent'
-    }`}
+      className={`fixed top-0 w-full px-4 py-1 shadow-lg z-50 transition-colors duration-300 ${
+        scrolled || isOpen ? "bg-black/70 backdrop-blur-md" : "bg-transparent"
+      }`}
       initial={{ y: "30%", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 2, ease: "easeInOut" }}
     >
       <div className="flex flex-col py-6">
-        {/* Mobile Header with Logo and Hamburger */}
         <div className="lg:hidden flex justify-between items-center">
-          
-          <div className="text-white font-extrabold text-2xl">
-            SHAHARYAR
-          </div>
-          
-         
-          <div 
+          <div className="text-white font-extrabold text-2xl">SHAHARYAR</div>
+
+          <div
             className="bg-amber-300 p-1 rounded cursor-pointer flex flex-col justify-center items-center gap-0.5 w-8 h-6"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -48,7 +50,6 @@ const Navbar = () => {
           </div>
         </div>
 
-      
         <div className="hidden lg:flex justify-center items-center space-x-5 mt-4">
           <ul className="flex space-x-5">
             {navItems.map((item) => (
@@ -61,9 +62,11 @@ const Navbar = () => {
                   offset={-70}
                   activeClass="active"
                   className={`capitalize px-2 pb-1 border-b-2 text-white ${
-                    item === 'contact' ? 'border border-white text-white text-xl px-10 mr-[15px] hover:text-[#FFB600]' :
-                    item === 'SHAHARYAR' ? 'font-extrabold border-none text-2xl' :
-                    "text-xl border-transparent hover:border-[#ffb600] hover:text-[#ffb600]"
+                    item === "contact"
+                      ? "border border-white text-white text-xl px-10 mr-[15px] hover:text-[#FFB600]"
+                      : item === "SHAHARYAR"
+                      ? "font-extrabold border-none text-2xl"
+                      : "text-xl border-transparent hover:border-[#ffb600] hover:text-[#ffb600]"
                   } transition-all duration-300 cursor-pointer relative`}
                 >
                   {item}
@@ -73,7 +76,6 @@ const Navbar = () => {
           </ul>
         </div>
 
-       
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -84,7 +86,7 @@ const Navbar = () => {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="flex flex-col items-center space-y-3 mt-4 lg:hidden"
             >
-              <ul className='flex flex-col items-center space-y-3'>
+              <ul className="flex flex-col items-center space-y-3">
                 {navItems.map((item) => (
                   <li key={item}>
                     <Link
@@ -95,9 +97,11 @@ const Navbar = () => {
                       offset={-70}
                       activeClass="active"
                       className={`capitalize px-2 pb-1 border-b-2 text-white ${
-                        item === 'contact' ? 'border border-white text-white text-xl px-10 mr-[15px] hover:text-[#FFB600]' :
-                        item === 'SHAHARYAR' ? 'font-extrabold border-none text-2xl' :
-                        "text-xl border-transparent hover:border-[#ffb600] hover:text-[#ffb600]"
+                        item === "contact"
+                          ? "border border-white text-white text-xl px-10 mr-[15px] hover:text-[#FFB600]"
+                          : item === "SHAHARYAR"
+                          ? "font-extrabold border-none text-2xl"
+                          : "text-xl border-transparent hover:border-[#ffb600] hover:text-[#ffb600]"
                       } transition-all duration-300 cursor-pointer relative`}
                     >
                       {item}
