@@ -9,6 +9,9 @@ import Portfolio from './components/Portfolio'
 import WhChose from './components/WhChose'
 import StartProject from './components/StartProject'
 import ExpRef from './components/ExpRef'
+import OurClients from './components/OurClients'
+import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
       <WhChose/>
       <StartProject/>
       <ExpRef/>
+      <OurClients/>
+      <ContactForm/>
+      <Footer/>
     </div>
   )
 }
