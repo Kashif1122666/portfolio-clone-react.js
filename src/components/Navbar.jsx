@@ -30,17 +30,25 @@ const Navbar = () => {
       transition={{ duration: 2, ease: "easeInOut" }}
     >
       <div className="flex flex-col py-6">
-        {/* Hamburger */}
-        <div 
-          className="lg:hidden ml-auto bg-amber-300 p-1 rounded cursor-pointer flex flex-col justify-center items-center gap-0.5 w-8 h-6"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <div className="w-5 h-0.5 bg-black"></div>
-          <div className="w-5 h-0.5 bg-black"></div>
-          <div className="w-5 h-0.5 bg-black"></div>
+        {/* Mobile Header with Logo and Hamburger */}
+        <div className="lg:hidden flex justify-between items-center">
+          
+          <div className="text-white font-extrabold text-2xl">
+            SHAHARYAR
+          </div>
+          
+         
+          <div 
+            className="bg-amber-300 p-1 rounded cursor-pointer flex flex-col justify-center items-center gap-0.5 w-8 h-6"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <div className="w-5 h-0.5 bg-black"></div>
+            <div className="w-5 h-0.5 bg-black"></div>
+            <div className="w-5 h-0.5 bg-black"></div>
+          </div>
         </div>
 
-        {/* Desktop Nav Items */}
+      
         <div className="hidden lg:flex justify-center items-center space-x-5 mt-4">
           <ul className="flex space-x-5">
             {navItems.map((item) => (
@@ -65,7 +73,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Mobile Nav Items */}
+       
         <AnimatePresence>
           {isOpen && (
             <motion.div
