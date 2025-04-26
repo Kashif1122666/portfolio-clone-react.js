@@ -12,6 +12,9 @@ import ExpRef from './components/ExpRef'
 import OurClients from './components/OurClients'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
+import FloatingWhatsAppButton from './components/FloatingWhatsAppButton'
+import ScrollToTopButton from './components/ScrollToTopButton'
+
 
 function App() {
   return (
@@ -31,6 +34,8 @@ function App() {
       <OurClients/>
       <ContactForm/>
       <Footer/>
+      <FloatingWhatsAppButton />
+      <ScrollToTopButton/>
     </div>
   )
 }
