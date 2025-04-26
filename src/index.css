@@ -19,3 +19,8 @@
     background: transparent;
   }
   
+  .active {
+    border-color: #ffb600;
+    color: #ffb600;
+  }
+  

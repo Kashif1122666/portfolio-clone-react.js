@@ -4,7 +4,7 @@ import aboutMe from "../Images/aboutMe.jpg";
 function About() {
   return (
     <div
-      id="aboutaboutMe"
+      id="aboutMe"
       className="bg-[#FFFFFF] flex flex-col lg:flex-row justify-center items-center min-h-screen gap-10 pt-20"
     >
       <img src={aboutMe} alt="picccc" className="w-[80%] lg:w-[35%] rounded" />

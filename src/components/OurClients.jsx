@@ -53,7 +53,7 @@ function OurClients() {
 
   return (
     <section
-      id="services"
+      id="our Clients"
       className="bg-[#F2F2F2] py-16 px-4 sm:px-10 lg:px-20 "
     >
       <p className="text-black font-bold text-2xl">Our Clients</p>

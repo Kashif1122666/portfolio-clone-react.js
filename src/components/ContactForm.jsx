@@ -37,6 +37,7 @@ const ContactForm = () => {
       animate="visible"
       variants={containerVariants}
       className="max-w-4xl mx-auto p-6 bg-white rounded-lg "
+      id="contact"
     >
       <div className=" mb-8">
         <motion.h2

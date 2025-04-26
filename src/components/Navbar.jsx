@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
@@ -60,7 +61,7 @@ const Navbar = () => {
                   duration={500}
                   spy={true}
                   offset={-70}
-                  activeClass="active"
+                  
                   className={`capitalize px-2 pb-1 border-b-2 text-white ${
                     item === "contact"
                       ? "border border-white text-white text-xl px-10 mr-[15px] hover:text-[#FFB600]"
@@ -90,22 +91,23 @@ const Navbar = () => {
                 {navItems.map((item) => (
                   <li key={item}>
                     <Link
-                      to={item}
-                      smooth={true}
-                      duration={500}
-                      spy={true}
-                      offset={-70}
-                      activeClass="active"
-                      className={`capitalize px-2 pb-1 border-b-2 text-white ${
-                        item === "contact"
-                          ? "border border-white text-white text-xl px-10 mr-[15px] hover:text-[#FFB600]"
-                          : item === "SHAHARYAR"
-                          ? "font-extrabold border-none text-2xl"
-                          : "text-xl border-transparent hover:border-[#ffb600] hover:text-[#ffb600]"
-                      } transition-all duration-300 cursor-pointer relative`}
-                    >
-                      {item}
-                    </Link>
+  to={item}
+  smooth={true}
+  duration={500}
+  spy={true}
+  offset={-70}
+  activeClass="active"
+  className={`capitalize px-1 pb-1 border-b-2 text-white ${
+    item === "contact"
+      ? "border border-white text-white text-xl px-10 mr-[15px] hover:text-[#FFB600]"
+      : item === "SHAHARYAR"
+      ? "font-extrabold border-none text-2xl"
+      : "text-xl border-transparent hover:border-[#ffb600] hover:text-[#ffb600]"
+  } transition-all duration-300 cursor-pointer relative`}
+>
+  {item}
+</Link>
+
                   </li>
                 ))}
               </ul>

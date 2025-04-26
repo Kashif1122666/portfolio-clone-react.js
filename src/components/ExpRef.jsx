@@ -28,7 +28,7 @@ const skills = [
 export default function ExpRef() {
   return (
     <>
-      <section className="py-12 px-4 sm:px-10 lg:px-20">
+      <section className="py-12 px-4 sm:px-10 lg:px-20" id="Experience & Reference">
         <h2 className="text-3xl font-bold text-black mb-12">
           Experience and Reference
         </h2>

@@ -42,7 +42,7 @@ function WhChose() {
   ];
 
   return (
-    <section id="services" className="  py-16 px-4 sm:px-10 lg:px-20">
+    <section id="why Chose" className="  py-16 px-4 sm:px-10 lg:px-20">
       <p className="text-black font-bold text-2xl">Why Chose</p>
       <div className="w-full px-0 mx-0">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2 lg:text-6xl">
